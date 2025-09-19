@@ -11,7 +11,7 @@ const featuredPackages = [
     description: 'Experience the vibrant culture of Thailand\'s capital with visits to ancient temples, floating markets, and authentic street food adventures.',
     duration: '5D/4N',
     price: 899,
-    image: '/images/packages/bangkok-cultural.jpg',
+    image: '/images/packages/bangkok.jpeg',
     destination: 'Thailand',
     featured: true
   },
@@ -36,15 +36,15 @@ const featuredPackages = [
     featured: true
   },
   {
-    id: 'philippines-boracay',
-    title: 'Boracay Beach Holiday',
-    description: 'Relax on pristine white sand beaches, enjoy water sports, and experience the vibrant nightlife of this tropical paradise.',
-    duration: '5D/4N',
-    price: 1100,
-    image: '/images/packages/philippines-boracay.jpg',
-    destination: 'Philippines',
+    id: 'malaysia-langkawi',
+    title: 'Langkawi Island Retreat',
+    description: 'Escape to the tropical paradise of Langkawi with pristine beaches, mangrove tours, and island adventures. Features cable car rides and sunset cruises.',
+    duration: '6D/5N',
+    price: 1200,
+    image: '/images/packages/malaysia-langkawi.jpg',
+    destination: 'Malaysia',
     featured: false
-  }
+  },
 ]
 
 // Testimonials data

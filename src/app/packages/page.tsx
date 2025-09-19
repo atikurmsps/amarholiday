@@ -16,7 +16,7 @@ const allPackages = [
     description: 'Experience the vibrant culture of Thailand\'s capital with visits to ancient temples, floating markets, and authentic street food adventures. Includes guided tours of Wat Phra Kaew, Grand Palace, and Chao Phraya River cruise.',
     duration: '5D/4N',
     price: 899,
-    image: '/images/packages/bangkok-cultural.jpg',
+    image: '/images/packages/bangkok.jpeg',
     destination: 'Thailand',
     featured: true
   },
@@ -277,26 +277,6 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      {/* Philippines Packages */}
-      <section id="philippines" className="py-20 gradient-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Philippines Packages
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover the natural wonders and cultural richness of the Philippines
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allPackages.filter(pkg => pkg.destination === 'Philippines').map((pkg) => (
-              <PackageCard key={pkg.id} {...pkg} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Malaysia Packages */}
       <section id="malaysia" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -311,6 +291,27 @@ export default function PackagesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allPackages.filter(pkg => pkg.destination === 'Malaysia').map((pkg) => (
+              <PackageCard key={pkg.id} {...pkg} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* Philippines Packages */}
+      <section id="philippines" className="py-20 gradient-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Philippines Packages
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the natural wonders and cultural richness of the Philippines
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {allPackages.filter(pkg => pkg.destination === 'Philippines').map((pkg) => (
               <PackageCard key={pkg.id} {...pkg} />
             ))}
           </div>

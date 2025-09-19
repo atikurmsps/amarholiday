@@ -5,40 +5,40 @@ import { useState } from 'react'
 // Gallery data with local images
 const galleryImages = [
   // Thailand
-  { id: 1, src: '/images/gallery/gallery-1.jpg', alt: 'Thailand Temple', destination: 'Thailand', category: 'culture' },
-  { id: 2, src: '/images/gallery/gallery-2.jpg', alt: 'Bangkok Street Food', destination: 'Thailand', category: 'food' },
-  { id: 3, src: '/images/gallery/gallery-3.jpg', alt: 'Phuket Beach', destination: 'Thailand', category: 'nature' },
-  { id: 4, src: '/images/gallery/gallery-4.jpg', alt: 'Chiang Mai Mountains', destination: 'Thailand', category: 'nature' },
+  { id: 1, src: '/images/gallery/1.jpg', alt: 'Thailand Temple', destination: 'Thailand', category: 'culture' },
+  { id: 2, src: '/images/gallery/2.jpg', alt: 'Bangkok Street Food', destination: 'Thailand', category: 'food' },
+  { id: 3, src: '/images/gallery/3.jpg', alt: 'Phuket Beach', destination: 'Thailand', category: 'nature' },
+  { id: 4, src: '/images/gallery/4.jpg', alt: 'Chiang Mai Mountains', destination: 'Thailand', category: 'nature' },
   
   // Maldives
-  { id: 5, src: '/images/gallery/gallery-5.jpg', alt: 'Maldives Water Villa', destination: 'Maldives', category: 'luxury' },
-  { id: 6, src: '/images/gallery/gallery-6.jpg', alt: 'Crystal Clear Waters', destination: 'Maldives', category: 'nature' },
-  { id: 7, src: '/images/gallery/gallery-7.jpg', alt: 'White Sand Beach', destination: 'Maldives', category: 'nature' },
-  { id: 8, src: '/images/gallery/gallery-8.jpg', alt: 'Underwater World', destination: 'Maldives', category: 'adventure' },
+  { id: 5, src: '/images/gallery/5.jpg', alt: 'Maldives Water Villa', destination: 'Maldives', category: 'luxury' },
+  { id: 6, src: '/images/gallery/6.jpg', alt: 'Crystal Clear Waters', destination: 'Maldives', category: 'nature' },
+  { id: 7, src: '/images/gallery/7.jpg', alt: 'White Sand Beach', destination: 'Maldives', category: 'nature' },
+  { id: 8, src: '/images/gallery/8.jpg', alt: 'Underwater World', destination: 'Maldives', category: 'adventure' },
   
   // Nepal
-  { id: 9, src: '/images/gallery/gallery-9.jpg', alt: 'Everest Base Camp', destination: 'Nepal', category: 'adventure' },
-  { id: 10, src: '/images/gallery/gallery-10.jpg', alt: 'Kathmandu Durbar Square', destination: 'Nepal', category: 'culture' },
-  { id: 11, src: '/images/gallery/gallery-11.jpg', alt: 'Pokhara Lake', destination: 'Nepal', category: 'nature' },
-  { id: 12, src: '/images/gallery/gallery-12.jpg', alt: 'Himalayan Mountains', destination: 'Nepal', category: 'nature' },
+  { id: 9, src: '/images/gallery/9.jpg', alt: 'Everest Base Camp', destination: 'Nepal', category: 'adventure' },
+  { id: 10, src: '/images/gallery/10.jpg', alt: 'Kathmandu Durbar Square', destination: 'Nepal', category: 'culture' },
+  { id: 11, src: '/images/gallery/11.jpg', alt: 'Pokhara Lake', destination: 'Nepal', category: 'nature' },
+  { id: 12, src: '/images/gallery/12.jpg', alt: 'Himalayan Mountains', destination: 'Nepal', category: 'nature' },
   
   // Philippines
-  { id: 13, src: '/images/gallery/gallery-1.jpg', alt: 'Boracay Sunset', destination: 'Philippines', category: 'nature' },
-  { id: 14, src: '/images/gallery/gallery-2.jpg', alt: 'Palawan Underground River', destination: 'Philippines', category: 'adventure' },
-  { id: 15, src: '/images/gallery/gallery-3.jpg', alt: 'Cebu Diving', destination: 'Philippines', category: 'adventure' },
-  { id: 16, src: '/images/gallery/gallery-4.jpg', alt: 'Manila City', destination: 'Philippines', category: 'culture' },
+  { id: 13, src: '/images/gallery/13.jpg', alt: 'Boracay Sunset', destination: 'Philippines', category: 'nature' },
+  { id: 14, src: '/images/gallery/14.jpg', alt: 'Palawan Underground River', destination: 'Philippines', category: 'adventure' },
+  { id: 15, src: '/images/gallery/15.jpg', alt: 'Cebu Diving', destination: 'Philippines', category: 'adventure' },
+  { id: 16, src: '/images/gallery/16.jpg', alt: 'Manila City', destination: 'Philippines', category: 'culture' },
   
   // Malaysia
-  { id: 17, src: '/images/gallery/gallery-5.jpg', alt: 'Kuala Lumpur Skyline', destination: 'Malaysia', category: 'culture' },
-  { id: 18, src: '/images/gallery/gallery-6.jpg', alt: 'Langkawi Island', destination: 'Malaysia', category: 'nature' },
-  { id: 19, src: '/images/gallery/gallery-7.jpg', alt: 'Genting Highlands', destination: 'Malaysia', category: 'nature' },
-  { id: 20, src: '/images/gallery/gallery-8.jpg', alt: 'Malaysian Borneo', destination: 'Malaysia', category: 'adventure' },
+  { id: 17, src: '/images/gallery/17.jpg', alt: 'Kuala Lumpur Skyline', destination: 'Malaysia', category: 'culture' },
+  { id: 18, src: '/images/gallery/18.jpg', alt: 'Langkawi Island', destination: 'Malaysia', category: 'nature' },
+  { id: 19, src: '/images/gallery/1.jpg', alt: 'Genting Highlands', destination: 'Malaysia', category: 'nature' },
+  { id: 20, src: '/images/gallery/2.jpg', alt: 'Malaysian Borneo', destination: 'Malaysia', category: 'adventure' },
   
   // India
-  { id: 21, src: '/images/gallery/gallery-9.jpg', alt: 'Taj Mahal', destination: 'India', category: 'culture' },
-  { id: 22, src: '/images/gallery/gallery-10.jpg', alt: 'Kerala Backwaters', destination: 'India', category: 'nature' },
-  { id: 23, src: '/images/gallery/gallery-11.jpg', alt: 'Goa Beach', destination: 'India', category: 'nature' },
-  { id: 24, src: '/images/gallery/gallery-12.jpg', alt: 'Jaipur Palace', destination: 'India', category: 'culture' },
+  { id: 21, src: '/images/gallery/3.jpg', alt: 'Taj Mahal', destination: 'India', category: 'culture' },
+  { id: 22, src: '/images/gallery/7.jpg', alt: 'Kerala Backwaters', destination: 'India', category: 'nature' },
+  { id: 23, src: '/images/gallery/13.jpg', alt: 'Goa Beach', destination: 'India', category: 'nature' },
+  { id: 24, src: '/images/gallery/12.jpg', alt: 'Jaipur Palace', destination: 'India', category: 'culture' },
 ]
 
 const destinations = ['All', 'Thailand', 'Maldives', 'Nepal', 'Philippines', 'Malaysia', 'India']
